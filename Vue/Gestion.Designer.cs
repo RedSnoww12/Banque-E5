@@ -40,6 +40,7 @@
             this.tb = new System.Windows.Forms.TextBox();
             this.lBox = new System.Windows.Forms.ListBox();
             this.lBox1 = new System.Windows.Forms.ListBox();
+            this.tauxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             // 
             this.modificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.découvertToolStripMenuItem,
-            this.clientToolStripMenuItem});
+            this.clientToolStripMenuItem,
+            this.tauxToolStripMenuItem});
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
             this.modificationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.modificationToolStripMenuItem.Text = "&Modification";
@@ -89,14 +91,14 @@
             // découvertToolStripMenuItem
             // 
             this.découvertToolStripMenuItem.Name = "découvertToolStripMenuItem";
-            this.découvertToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.découvertToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.découvertToolStripMenuItem.Text = "&Découvert";
             this.découvertToolStripMenuItem.Click += new System.EventHandler(this.découvertToolStripMenuItem_Click);
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem.Text = "&Client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
@@ -150,6 +152,13 @@
             this.lBox1.Size = new System.Drawing.Size(472, 160);
             this.lBox1.TabIndex = 5;
             // 
+            // tauxToolStripMenuItem
+            // 
+            this.tauxToolStripMenuItem.Name = "tauxToolStripMenuItem";
+            this.tauxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tauxToolStripMenuItem.Text = "Taux";
+            this.tauxToolStripMenuItem.Click += new System.EventHandler(this.tauxToolStripMenuItem_Click);
+            // 
             // Gestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,7 +173,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Gestion";
             this.Text = "Gestion de comptes";
-      
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -187,6 +195,7 @@
         private System.Windows.Forms.TextBox tb;
         private System.Windows.Forms.ListBox lBox;
         private System.Windows.Forms.ListBox lBox1;
+        private System.Windows.Forms.ToolStripMenuItem tauxToolStripMenuItem;
     }
 }
 

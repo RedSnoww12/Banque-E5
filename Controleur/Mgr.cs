@@ -54,6 +54,13 @@ namespace Banque.Controleur
 
         }
 
+        public void updateTaux(CompteEpargne c)
+        {
+
+            cd.updateTaux(c);
+
+        }
+
 
     }
 }

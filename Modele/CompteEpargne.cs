@@ -9,14 +9,31 @@ namespace Banque.Modele
     class CompteEpargne : Compte
     {
 
-        static double taux;
+        private double taux;
 
         public CompteEpargne(int n, Client c, double unTaux) : base(n, c)
         {
-            CompteEpargne.taux = unTaux;
+            Taux = unTaux;
 
         }
 
+        public void setTaux(double value)
+        {
+
+
+            if (value > 0)
+            {
+                this.Taux = value;
+
+            }
+
+            else
+            {
+                throw (new Exception("Interdit"));
+
+            }
+
+        }
 
         public override void debiter(double mont)
         {
@@ -32,7 +49,8 @@ namespace Banque.Modele
 
         public override string Description
         {
-            get => base.Description + " taux : " + CompteEpargne.taux;
+            get => base.Description + " taux : " + Taux;
         }
+        public double Taux { get => taux; set => taux = value; }
     }
 }

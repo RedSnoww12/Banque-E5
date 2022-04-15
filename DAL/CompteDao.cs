@@ -176,6 +176,33 @@ namespace Banque.DAL
             }
         }
 
+        public void updateTaux(CompteEpargne c)
+        {
+
+            try
+            {
+
+                maConnexionSql = ConnexionSql.getInstance(Fabrique.ProviderMysql, Fabrique.DataBaseMysql, Fabrique.UidMysql, Fabrique.MdpMysql);
+
+                maConnexionSql.openConnection();
+
+
+
+                Ocom = maConnexionSql.reqExec("UPDATE compteepargne SET tauxInteret = '" + c.Taux + "'WHERE numCompte ='" + c.Num + "'");
+
+                Ocom.ExecuteNonQuery();
+
+                maConnexionSql.closeConnection();
+
+            }
+
+            catch (Exception emp)
+            {
+
+                throw (emp);
+            }
+        }
+
 
     }
 }

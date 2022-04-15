@@ -143,13 +143,38 @@ namespace Banque
                     {
                         if (c.GetType().Name == "CompteCourant")
 
-                                {
-                           ((CompteCourant) c).setDecouv(Convert.ToDouble(tb.Text));
+                        {
+                            ((CompteCourant)c).setDecouv(Convert.ToDouble(tb.Text));
                             monManager.updateDecouvert((CompteCourant)c);
 
                         }
 
+                    }
+
+
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show("" + Ex.Message);
+
+
+                    }  
+
                 }
+
+                if (bouton.Text == "Valider le Taux")
+                {
+
+                    try
+                    {
+                        if (c.GetType().Name == "CompteEpargne")
+
+                        {
+                            ((CompteEpargne)c).setTaux(Convert.ToDouble(tb.Text));
+                            monManager.updateTaux((CompteEpargne)c);
+
+                        }
+
+                    }
 
 
                     catch (Exception Ex)
@@ -159,12 +184,9 @@ namespace Banque
 
                     }
 
-
-                   
-
                 }
 
-            lstcpt = monManager.chargementCBD(cl);
+                lstcpt = monManager.chargementCBD(cl);
             
 
 
@@ -283,6 +305,18 @@ namespace Banque
 
 
 
+        }
+
+        private void tauxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lab.Visible = true;
+            lab.Text = "Montant du nouveau Taux";
+
+            bouton.Visible = true;
+            bouton.Text = "Valider le Taux";
+
+
+            tb.Visible = true;
         }
     }
 }
