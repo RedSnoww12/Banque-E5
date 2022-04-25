@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Banque.Modele
 {
-    class CompteCourant : Compte
+    public class CompteCourant : Compte
     {
 
         private double decouv = 0;
